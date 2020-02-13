@@ -2,9 +2,9 @@ package ninjapack;
 
 public class Game
 {
-    private TwoGamer twoGamer; // bom
-    private OneGamer oneGamer; // flag
-    private GameState state;
+    private static TwoGamer twoGamer; // bom
+    private static OneGamer oneGamer; // flag
+    private static GameState state;
 
     public GameState getState() {
         return state;
@@ -13,8 +13,14 @@ public class Game
     public Game (int cols,int rows)
     {
         Ranges.setSize(new Coord(cols, rows));
-        twoGamer = new TwoGamer();
         oneGamer = new OneGamer();
+        twoGamer = new TwoGamer();
+
+    }
+
+    public Game()
+    {
+
     }
 
     public void start()
@@ -33,28 +39,29 @@ public class Game
     }
 
 
-/*
-    public void pressLeftButton(Coord coord)
+ /*  public void pressLeftButton(Coord coord)
     {
         //flag.setOpenedToBox(coord);
 
-        if(gameOver()) return;
-        openBox(coord);
-        checkWinner();
+       // if(gameOver()) return;
+        //openBox(coord);
+        //checkWinner();
 
-    }
+    }*/
 
 
- */
-/*
-    private void checkWinner ()
+
+
+  /*  private void checkWinner ()
     {
         if(state == GameState.PLAYED)
             if(oneGamer.getCountOfClosedBoxes() == twoGamer.getTotalBombs())
                 state = GameState.WINNER;
     }
 
- */
+   */
+
+
 /*
     private void openBox(Coord coord)
     {
@@ -73,14 +80,18 @@ public class Game
     }
 
  */
-/*
+
     public void pressRightButton(Coord coord)
     {
         if(gameOver()) return;
-        oneGamer.toggleFlagedToBox(coord);
+        if(Box.ONE == oneGamer.get(coord))
+            oneGamer.openGo(coord);
+        if(Box.TWO == oneGamer.get(coord))
+            twoGamer.openGo(coord);
+
     }
 
- */
+
 
     private boolean gameOver()
     {

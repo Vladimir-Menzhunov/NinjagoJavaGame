@@ -8,7 +8,7 @@ public class Matrix
     {
         matrix = new Box[Ranges.getSize().x][Ranges.getSize().y];
         for(Coord coord : Ranges.getAllCoords())
-            if(Box.ONE != get(coord) && Box.TWO != get(coord))
+            if(Box.ONE != get(coord) && Box.TWO != get(coord) && Box.OPENGO != get(coord))
                 matrix[coord.x][coord.y] = defaultBox;
 
         }

@@ -35,6 +35,8 @@ public class Ranges
         return  coord.x >= 0 && coord.x < size.x && coord.y >=0 && coord.y < size.y;
     }
 
+
+
     static Coord getRandomCoord ()
     {
         return new Coord (random.nextInt(size.x), random.nextInt(size.y));

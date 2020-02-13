@@ -32,15 +32,16 @@ public class Ninjago extends JFrame
         setImages();
         initFrame();
         initJPanel();
+        initJLable();
 
     }
 
     private void initFrame()
     {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setTitle("My MEGA game Ninjago");
+        setTitle("Ninjago");
         setResizable(false);
-        setSize(new Dimension(COLS * (IMAGE_SIZE + 1),ROWS * (IMAGE_SIZE + 6)));
+        setSize(new Dimension(COLS * (IMAGE_SIZE + 1),ROWS * (IMAGE_SIZE + 10)));
         setVisible(true);
         setIconImage(getImage("ninja"));
         //pack();//изменение размера для всего
@@ -57,6 +58,7 @@ public class Ninjago extends JFrame
                 super.paintComponent(g);
                 for(Coord coord : Ranges.getAllCoords())
                 {
+                    //Coord coord = new Coord(box.ordinal() * IMAGE_SIZE, 0);
                     g.drawImage((Image) game.getBox(coord).image, coord.x * IMAGE_SIZE, coord.y * IMAGE_SIZE, this);
 
                 }
@@ -65,7 +67,7 @@ public class Ninjago extends JFrame
 
 
 
-       /* panel.addMouseListener(new MouseAdapter()
+        panel.addMouseListener(new MouseAdapter()
         {
             @Override
             public void mousePressed(MouseEvent e)
@@ -73,20 +75,18 @@ public class Ninjago extends JFrame
                 int x = e.getX() / IMAGE_SIZE;
                 int y = e.getY() / IMAGE_SIZE;
                 Coord coord = new Coord (x, y);
-                if(e.getButton() == MouseEvent.BUTTON1) // нажата левая кнопка мыши проверяем.
-                    game.pressLeftButton(coord);
+             /*  if(e.getButton() == MouseEvent.BUTTON1) // нажата левая кнопка мыши проверяем.
+                    game.pressLeftButton(coord);*/
                 if (e.getButton() == MouseEvent.BUTTON3)
                     game.pressRightButton(coord);
-                if (e.getButton() == MouseEvent.BUTTON2)
-                    game.start();
+               /* if (e.getButton() == MouseEvent.BUTTON2)
+                    game.start();*/
 
                 label.setText (getMessage());
                 panel.repaint();
             }
 
         });
-
-        */
 
         panel.setPreferredSize(new Dimension(
                 Ranges.getSize().x * IMAGE_SIZE,
@@ -105,5 +105,23 @@ public class Ninjago extends JFrame
     {
         for(Box box :  Box.values()) box.image = getImage(box.name().toLowerCase());
     }
+
+    private String getMessage()
+    {
+        switch (game.getState())
+        {
+            case PLAYED: return "Think twice!";
+            case BOMBED: return "Ba-ba-bammm";
+            case WINNER: return "Победа!";
+            default: return "Welcome!";
+        }
+    }
+
+    private void initJLable()
+    {
+        label = new JLabel("Welcome!");
+        add(label, BorderLayout.SOUTH);
+    }
+
 
 }
