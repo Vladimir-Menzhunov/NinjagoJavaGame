@@ -52,6 +52,7 @@ public class OneGamer
             switch (game.getBox(coord)) {
                 case TWO: setClosedToBox(coord); break;
                 case EMPT: setOpenGoBox(coord); break;
+
             }
         }
 
@@ -64,9 +65,26 @@ public class OneGamer
 
     public void setOpenGoBox(Coord coord)
     {
+        for(Coord around : Ranges.getAllCoords())
+        {
+            if(Box.OPENGO == playerMap.get(around))
+                playerMap.set(around, Box.EMPT);
+            if(Box.TWONOGO == playerMap.get(around))
+                playerMap.set(around, Box.TWO);
+        }
+
         playerMap.set(coord, Box.OPENGO);
     }
 
 
-
+    public void emptNo()
+    {
+        for(Coord around : Ranges.getAllCoords())
+        {
+            if(Box.OPENGO == playerMap.get(around))
+                playerMap.set(around, Box.EMPT);
+            if(Box.TWONOGO == playerMap.get(around))
+                playerMap.set(around, Box.TWO);
+        }
+    }
 }

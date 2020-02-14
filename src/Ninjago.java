@@ -75,8 +75,8 @@ public class Ninjago extends JFrame
                 int x = e.getX() / IMAGE_SIZE;
                 int y = e.getY() / IMAGE_SIZE;
                 Coord coord = new Coord (x, y);
-             /*  if(e.getButton() == MouseEvent.BUTTON1) // нажата левая кнопка мыши проверяем.
-                    game.pressLeftButton(coord);*/
+                 if(e.getButton() == MouseEvent.BUTTON1) // нажата левая кнопка мыши проверяем.
+                    game.pressLeftButton(coord);
                 if (e.getButton() == MouseEvent.BUTTON3)
                     game.pressRightButton(coord);
                /* if (e.getButton() == MouseEvent.BUTTON2)

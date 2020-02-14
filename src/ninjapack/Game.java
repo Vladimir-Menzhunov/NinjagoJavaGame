@@ -39,15 +39,16 @@ public class Game
     }
 
 
- /*  public void pressLeftButton(Coord coord)
+     public void pressLeftButton(Coord coord)
     {
-        //flag.setOpenedToBox(coord);
+        /*//flag.setOpenedToBox(coord);
 
        // if(gameOver()) return;
         //openBox(coord);
-        //checkWinner();
+        //checkWinner();*/
 
-    }*/
+
+    }
 
 
 
@@ -86,8 +87,13 @@ public class Game
         if(gameOver()) return;
         if(Box.ONE == oneGamer.get(coord))
             oneGamer.openGo(coord);
-        if(Box.TWO == oneGamer.get(coord))
+        if(Box.TWO == oneGamer.get(coord)) //TODO
             twoGamer.openGo(coord);
+        if(Box.EMPT == oneGamer.get(coord) && Box.EMPT == oneGamer.get(coord))
+        {
+            //twoGamer.emptNo(coord);
+            oneGamer.emptNo();
+        }
 
     }
 
