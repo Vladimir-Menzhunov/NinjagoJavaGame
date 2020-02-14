@@ -2,8 +2,9 @@ package ninjapack;
 
 public enum GameState
 {
-    PLAYED,
-    BOMBED,
-    WINNER;
+    PLAYEDONE,
+    PLAYEDTWO,
+    WINNERONE,
+    WINNERTWO;
 }
 

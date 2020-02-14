@@ -3,21 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="ed549f1c-4b77-4b1e-b621-8e4c9c08b833" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/Ninjago$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/Ninjago$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/Ninjago$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/Ninjago$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/Ninjago.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/Ninjago.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/Box.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/Box.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/GameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/Matrix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/OneGamer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/OneGamer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/OneGamer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/OneGamer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/TwoGamer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/TwoGamer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/TwoGamer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ninjago/ninjapack/TwoGamer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ninjago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ninjago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ninjapack/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ninjapack/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ninjapack/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ninjapack/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ninjapack/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ninjapack/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ninjapack/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ninjapack/Matrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ninjapack/OneGamer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ninjapack/OneGamer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ninjapack/Ranges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ninjapack/Ranges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ninjapack/TwoGamer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ninjapack/TwoGamer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="183" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,6 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -85,54 +104,87 @@
       <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state x="119" y="244" width="619" height="410" key="#com.intellij.fileTypes.FileTypeChooser/0.27.3286.1053@0.27.3286.1053" timestamp="1581615158267" />
+    <state x="491" y="82" width="380" height="636" key="#com.intellij.ide.util.MemberChooser" timestamp="1581699592493">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="491" y="82" width="380" height="636" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581699592493" />
     <state x="416" y="175" width="530" height="453" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1581616823212">
       <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state x="416" y="175" width="530" height="453" key="#com.intellij.ide.util.PackageChooserDialog/0.27.3286.1053@0.27.3286.1053" timestamp="1581616823212" />
+    <state x="424" y="274" width="517" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581705273206">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="424" y="274" width="517" height="265" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581705273206" />
     <state x="335" y="27" width="691" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581617910466">
       <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state x="335" y="27" width="691" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.3286.1053@0.27.3286.1053" timestamp="1581617910466" />
-    <state x="416" y="145" width="530" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581619068712">
-      <screen x="0" y="27" width="3286" height="1053" />
-    </state>
-    <state x="416" y="145" width="530" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.3286.1053@0.27.3286.1053" timestamp="1581619068712" />
-    <state width="619" height="171" key="GridCell.Tab.0.bottom" timestamp="1581661573350">
+    <state x="173" y="110" width="374" height="360" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581694971210">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state x="173" y="110" width="374" height="360" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581694971210" />
+    <state x="416" y="145" width="530" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.3286.1053@0.27.3286.1053" timestamp="1581619068712" />
+    <state x="620" y="155" width="430" height="488" key="FileChooserDialogImpl" timestamp="1581682044701">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="620" y="155" width="430" height="488" key="FileChooserDialogImpl/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581682044701" />
+    <state width="1312" height="172" key="GridCell.Tab.0.bottom" timestamp="1581711679555">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1312" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581711679555" />
     <state width="619" height="171" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1581661573350" />
     <state width="1312" height="213" key="GridCell.Tab.0.bottom/0.27.3286.1053@0.27.3286.1053" timestamp="1581633006379" />
-    <state width="619" height="171" key="GridCell.Tab.0.center" timestamp="1581661573350">
+    <state width="1312" height="172" key="GridCell.Tab.0.center" timestamp="1581711679555">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1312" height="172" key="GridCell.Tab.0.center/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581711679555" />
     <state width="619" height="171" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1581661573350" />
     <state width="1312" height="213" key="GridCell.Tab.0.center/0.27.3286.1053@0.27.3286.1053" timestamp="1581633006378" />
-    <state width="619" height="171" key="GridCell.Tab.0.left" timestamp="1581661573349">
+    <state width="1312" height="172" key="GridCell.Tab.0.left" timestamp="1581711679555">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1312" height="172" key="GridCell.Tab.0.left/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581711679555" />
     <state width="619" height="171" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1581661573349" />
     <state width="1312" height="213" key="GridCell.Tab.0.left/0.27.3286.1053@0.27.3286.1053" timestamp="1581633006378" />
-    <state width="619" height="171" key="GridCell.Tab.0.right" timestamp="1581661573350">
+    <state width="1312" height="172" key="GridCell.Tab.0.right" timestamp="1581711679555">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1312" height="172" key="GridCell.Tab.0.right/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581711679555" />
     <state width="619" height="171" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1581661573350" />
     <state width="1312" height="213" key="GridCell.Tab.0.right/0.27.3286.1053@0.27.3286.1053" timestamp="1581633006378" />
-    <state width="1312" height="213" key="GridCell.Tab.1.bottom" timestamp="1581633006379">
-      <screen x="0" y="27" width="3286" height="1053" />
+    <state width="1312" height="151" key="GridCell.Tab.1.bottom" timestamp="1581706152747">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1312" height="151" key="GridCell.Tab.1.bottom/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581706152747" />
     <state width="1312" height="213" key="GridCell.Tab.1.bottom/0.27.3286.1053@0.27.3286.1053" timestamp="1581633006379" />
-    <state width="1312" height="213" key="GridCell.Tab.1.center" timestamp="1581633006379">
-      <screen x="0" y="27" width="3286" height="1053" />
+    <state width="1312" height="151" key="GridCell.Tab.1.center" timestamp="1581706152747">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1312" height="151" key="GridCell.Tab.1.center/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581706152747" />
     <state width="1312" height="213" key="GridCell.Tab.1.center/0.27.3286.1053@0.27.3286.1053" timestamp="1581633006379" />
-    <state width="1312" height="213" key="GridCell.Tab.1.left" timestamp="1581633006379">
-      <screen x="0" y="27" width="3286" height="1053" />
+    <state width="1312" height="151" key="GridCell.Tab.1.left" timestamp="1581706152747">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1312" height="151" key="GridCell.Tab.1.left/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581706152747" />
     <state width="1312" height="213" key="GridCell.Tab.1.left/0.27.3286.1053@0.27.3286.1053" timestamp="1581633006379" />
-    <state width="1312" height="213" key="GridCell.Tab.1.right" timestamp="1581633006379">
-      <screen x="0" y="27" width="3286" height="1053" />
+    <state width="1312" height="151" key="GridCell.Tab.1.right" timestamp="1581706152747">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
+    <state width="1312" height="151" key="GridCell.Tab.1.right/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581706152747" />
     <state width="1312" height="213" key="GridCell.Tab.1.right/0.27.3286.1053@0.27.3286.1053" timestamp="1581633006379" />
+    <state x="480" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1581682014159">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="480" y="225" key="com.intellij.ide.util.TipDialog/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581682014159" />
+    <state x="0" y="27" width="689" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581702546578">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="0" y="27" width="689" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581702546578" />
+    <state x="416" y="145" width="530" height="510" key="extract.method.dialog" timestamp="1581693456224">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="416" y="145" width="530" height="510" key="extract.method.dialog/0.27.1366.741/1366.0.1920.1080@0.27.1366.741" timestamp="1581693456224" />
     <state x="325" y="27" width="716" height="942" key="find.popup" timestamp="1581626071936">
       <screen x="0" y="27" width="3286" height="1053" />
     </state>
@@ -146,11 +198,34 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ninjapack/Game.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ninjapack/Matrix.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ninjapack/OneGamer.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="8" />
+          <line>37</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ninjapack/OneGamer.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ninjapack/Ranges.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Ninjago$Ninjago.ic" NAME="Ninjago Coverage Results" MODIFIED="1581705971154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

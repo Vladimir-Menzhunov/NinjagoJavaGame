@@ -2,19 +2,22 @@ package ninjapack;
 
 public class Game
 {
-    private static TwoGamer twoGamer; // bom
-    private static OneGamer oneGamer; // flag
+
+    private static TwoGamer twoGamer;
+    private static OneGamer oneGamer;
     private static GameState state;
+    private static Coord lastMove;
 
     public GameState getState() {
         return state;
     }
 
-    public Game (int cols,int rows)
+    public Game (int cols,int rows) // конструктор с параметрами для запуска проццессов игры
     {
         Ranges.setSize(new Coord(cols, rows));
         oneGamer = new OneGamer();
         twoGamer = new TwoGamer();
+
 
     }
 
@@ -27,10 +30,11 @@ public class Game
     {
         twoGamer.start();
         oneGamer.start();
-        state = GameState.PLAYED;
+
+        state = GameState.PLAYEDONE;
     }
 
-   public Box getBox (Coord coord)
+   public Box getBox (Coord coord) // получаем Box c одного из полей
     {
         if(oneGamer.get(coord) == Box.EMPT)
             return twoGamer.get(coord);
@@ -39,59 +43,97 @@ public class Game
     }
 
 
-     public void pressLeftButton(Coord coord)
+     public void pressLeftButton(Coord coord) // отслеживание нажатия левой кнопки мыши с последующей проверкой на состояние статуса игры
     {
-        /*//flag.setOpenedToBox(coord);
 
-       // if(gameOver()) return;
-        //openBox(coord);
-        //checkWinner();*/
-
-
-    }
-
-
-
-
-  /*  private void checkWinner ()
-    {
-        if(state == GameState.PLAYED)
-            if(oneGamer.getCountOfClosedBoxes() == twoGamer.getTotalBombs())
-                state = GameState.WINNER;
-    }
-
-   */
-
-
-/*
-    private void openBox(Coord coord)
-    {
-        switch (oneGamer.get(coord))
+        if(gameOver()) return;
+        switch (getBox(coord))
         {
-            case OPENED: setOpenedToClosedBoxesAroundNumber(coord); return ;
-            case FLAGED: return;
-            case CLOSED:
-                switch (twoGamer.get(coord))
-                {
-                    case ZERO: openBoxesAround (coord); return;
-                    case BOMB: openBombs(coord);return;
-                    default: oneGamer.setOpenedToBox(coord); return;
+            case OPENGO: {
+                makeMove(coord);
+                if (state == GameState.PLAYEDONE) {
+                    state = GameState.PLAYEDTWO;
+                } else if (state == GameState.PLAYEDTWO) {
+                    state = GameState.PLAYEDONE;
                 }
+                break;
+            }
+
+
+            default: {
+                twoGamer.emptNo();
+                oneGamer.emptNo();
+
+                break;
+            }
+
+        }
+        checkWinner();
+    }
+
+    private void makeMove(Coord coord)
+    {
+        if(getBox(lastMove) == Box.ONE)
+        {
+            oneGamer.setLastCoord(lastMove);
+            oneGamer.setPlayerMove(coord);
+            oneGamer.setListCoord(coord);
+
+        }
+
+        if(getBox(lastMove) == Box.TWO)
+        {
+            twoGamer.setLastMove(lastMove);
+            twoGamer.setPlayerMove(coord);
+            twoGamer.setLastCoordOnY(coord.y);
+        }
+
+    }
+
+
+    private void checkWinner ()
+    {
+        if(state == GameState.PLAYEDONE || state == GameState.PLAYEDTWO)
+        {
+            if(!twoGamer.getBooleanIsMove()) {
+                state = GameState.WINNERONE;
+                return;
+            }
+            int max = twoGamer.getLastCoordOnY();
+            for(Coord coord : Ranges.getAllCoords())
+            {
+                if(oneGamer.get(coord) == Box.ONE)
+                {
+                    if(max < coord.y) max = coord.y;
+                    else if(max == coord.y) max = coord.y + 1;
+                }
+            }
+            if(max == twoGamer.getLastCoordOnY()) state = GameState.WINNERTWO;
         }
     }
 
- */
 
-    public void pressRightButton(Coord coord)
+
+
+    public void pressRightButton(Coord coord) // отслеживание нажатия правой кнопки мыши учитывая 3 условия(в клетке стоит 1, 2 или она пустая)
     {
         if(gameOver()) return;
-        if(Box.ONE == oneGamer.get(coord))
-            oneGamer.openGo(coord);
-        if(Box.TWO == oneGamer.get(coord)) //TODO
-            twoGamer.openGo(coord);
-        if(Box.EMPT == oneGamer.get(coord) && Box.EMPT == oneGamer.get(coord))
+        if(Box.ONE == oneGamer.get(coord) && state == GameState.PLAYEDONE)
         {
-            //twoGamer.emptNo(coord);
+            lastMove = new Coord(coord.x, coord.y);
+            oneGamer.showOpenGo(coord);
+
+        }
+        if(Box.TWO == twoGamer.get(coord) && state == GameState.PLAYEDTWO)
+        {
+            lastMove = new Coord(coord.x, coord.y);
+            twoGamer.openGo(coord);
+
+        }
+
+        if(Box.EMPT == oneGamer.get(coord) && Box.EMPT == twoGamer.get(coord))
+        {
+            twoGamer.emptNo();
             oneGamer.emptNo();
         }
 
@@ -99,11 +141,22 @@ public class Game
 
 
 
-    private boolean gameOver()
+    private boolean gameOver() // отслеживани конца игры
     {
-        if (state == GameState.PLAYED)
+        if (state == GameState.PLAYEDONE || state == GameState.PLAYEDTWO)
             return false;
+
         start();
         return true;
+    }
+
+    public OneGamer getOneGamer()
+    {
+        return oneGamer;
+    }
+
+    public TwoGamer getTwoGamer()
+    {
+        return twoGamer;
     }
 }

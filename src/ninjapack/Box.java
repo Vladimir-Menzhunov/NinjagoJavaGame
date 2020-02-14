@@ -13,12 +13,4 @@ public enum Box
 
 
     public Object image;
-    public Box getNextNumberBox()
-    {
-        return Box.values()[this.ordinal() + 1];
-    }
-
-    public int getNumber() {
-        return this.ordinal();
-    }
 }

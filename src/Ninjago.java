@@ -22,9 +22,9 @@ public class Ninjago extends JFrame
     public static void main(String[] args)
     {
         new Ninjago().setVisible(true);
-    }
+    } // Запускаем окно JFrame
 
-    private Ninjago()
+    private Ninjago() // Конструктор игры, собирает пользовательский интерфейс и запускает объект game.
     {
         game = new Game(COLS,ROWS);
         game.start();
@@ -36,19 +36,18 @@ public class Ninjago extends JFrame
 
     }
 
-    private void initFrame()
+    private void initFrame() // инициализация JFrame
     {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ninjago");
         setResizable(false);
-        setSize(new Dimension(COLS * (IMAGE_SIZE + 1),ROWS * (IMAGE_SIZE + 10)));
+        setSize(new Dimension(COLS * (IMAGE_SIZE + 2),ROWS * (IMAGE_SIZE + 10)));
         setVisible(true);
         setIconImage(getImage("ninja"));
-        //pack();//изменение размера для всего
-        setLocationRelativeTo(null); // по центру окошко
+        setLocationRelativeTo(null);
     }
 
-    private void initJPanel()
+    private void initJPanel() // инициализация JPanel + слушатель кнопок мыши
     {
         panel = new JPanel()
         {
@@ -58,15 +57,10 @@ public class Ninjago extends JFrame
                 super.paintComponent(g);
                 for(Coord coord : Ranges.getAllCoords())
                 {
-                    //Coord coord = new Coord(box.ordinal() * IMAGE_SIZE, 0);
-                    g.drawImage((Image) game.getBox(coord).image, coord.x * IMAGE_SIZE, coord.y * IMAGE_SIZE, this);
-
+                   g.drawImage((Image) game.getBox(coord).image, coord.x * IMAGE_SIZE, coord.y * IMAGE_SIZE, this);
                 }
             }
         };
-
-
-
         panel.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -75,12 +69,12 @@ public class Ninjago extends JFrame
                 int x = e.getX() / IMAGE_SIZE;
                 int y = e.getY() / IMAGE_SIZE;
                 Coord coord = new Coord (x, y);
-                 if(e.getButton() == MouseEvent.BUTTON1) // нажата левая кнопка мыши проверяем.
+                 if(e.getButton() == MouseEvent.BUTTON1)
                     game.pressLeftButton(coord);
                 if (e.getButton() == MouseEvent.BUTTON3)
                     game.pressRightButton(coord);
-               /* if (e.getButton() == MouseEvent.BUTTON2)
-                    game.start();*/
+               if (e.getButton() == MouseEvent.BUTTON2)
+                    game.start();
 
                 label.setText (getMessage());
                 panel.repaint();
@@ -106,13 +100,14 @@ public class Ninjago extends JFrame
         for(Box box :  Box.values()) box.image = getImage(box.name().toLowerCase());
     }
 
-    private String getMessage()
+    private String getMessage() // Получение сообщения для JLable
     {
         switch (game.getState())
         {
-            case PLAYED: return "Think twice!";
-            case BOMBED: return "Ba-ba-bammm";
-            case WINNER: return "Победа!";
+            case PLAYEDONE: return "Ход первого!";
+            case PLAYEDTWO: return "Ход второго";
+            case WINNERONE: return "Победа первого!";
+            case WINNERTWO: return "Победа второго!";
             default: return "Welcome!";
         }
     }
